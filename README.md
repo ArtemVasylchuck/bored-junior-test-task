@@ -12,8 +12,20 @@ it provides a possibility to look up last added activities.
 
 ## Database structure
 Database has one single scheme called Activities:
-![img.png](img.png)
-
+```
+create table activities
+(
+    id            INTEGER not null
+        primary key,
+    name          VARCHAR not null,
+    type          VARCHAR not null,
+    participants  INTEGER not null,
+    price         FLOAT   not null,
+    link          VARCHAR,
+    key           INTEGER not null,
+    accessibility FLOAT   not null
+);
+```
 ## Installation
 1. First, create and activate your virtual environment
 ```
